@@ -1,0 +1,84 @@
+name: edufy_mobile
+description: "Edufy mobile app."
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ^3.9.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  dio: ^5.9.0
+  equatable: ^2.0.7
+  firebase_auth: ^6.1.0
+  firebase_core: ^4.1.1
+  firebase_messaging: ^16.0.2
+  flutter_bloc: ^9.1.1
+  flutter_svg: ^2.2.1
+  get_it: ^8.2.0
+  go_router: ^16.2.4
+  json_annotation: ^4.9.0
+  pinput: ^5.0.2
+  pretty_dio_logger: ^1.4.0
+  shared_preferences: ^2.5.3
+  cupertino_icons: ^1.0.8
+
+  # ✨ BỔ SUNG cho @CopyWith
+  copy_with_extension: ^10.0.1
+
+  animated_bottom_navigation_bar: ^1.4.0
+  tuple: ^2.0.2
+  syncfusion_flutter_gauges: ^31.1.23
+  dots_indicator: ^4.0.1
+  flutter_launcher_icons: ^0.14.4
+  auto_size_text: ^3.0.0
+  shimmer: ^3.0.0
+  select2dot1: ^2.0.9
+  image_picker: ^1.2.0
+  path_provider: ^2.1.5
+  toastification: ^3.0.3
+  maplibre_gl: ^0.24.0
+  google_sign_in: ^7.2.0
+  flutter_appauth: ^10.0.0
+  flutter_web_auth_2: ^4.1.0
+  geolocator: ^14.0.2
+  permission_handler: ^12.0.1
+  graphview: ^1.2.4
+  dotted_border: ^2.0.0
+  qr_flutter: ^4.1.0
+  url_launcher: ^6.3.2
+  app_tracking_transparency: ^2.0.6+1
+  flutter_localization: ^0.3.3
+  share_plus: ^12.0.1
+  hash_cached_image: ^0.0.2
+  qr_code_scanner_plus: ^2.0.14
+  google_mlkit_barcode_scanning: ^0.14.1
+  persistent_bottom_nav_bar_v2: ^6.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+  # Codegen
+  build_runner: ^2.4.8
+  json_serializable: ^6.11.1
+  copy_with_extension_gen: ^10.0.1
+
+  # FlutterGen
+  flutter_gen: ^5.12.0
+  flutter_gen_runner: ^5.12.0
+
+flutter:
+  uses-material-design: true
+  generate: true
+  assets:
+    - assets/fonts/
+    - assets/icons/
+    - assets/images/
+
+flutter_gen:
+  output: lib/gen/
+  line_length: 80
