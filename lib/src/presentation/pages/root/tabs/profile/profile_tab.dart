@@ -24,7 +24,7 @@ class _ProfileTabState extends State<ProfileTab> {
           if (exception != null) {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
-                content: Text(exception.message ?? 'Có lỗi xảy ra'),
+                content: Text(exception.message),
               ),
             );
           }

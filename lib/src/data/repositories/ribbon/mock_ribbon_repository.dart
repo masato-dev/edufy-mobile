@@ -1,6 +1,7 @@
+import 'package:edufy_mobile/src/core/network/exception/api_exception.dart';
+import 'package:edufy_mobile/src/data/dtos/common/export.dart';
 import 'package:edufy_mobile/src/data/models/export.dart';
 import 'package:edufy_mobile/src/shared/types/api_result.dart';
-import 'package:edufy_mobile/src/core/network/exception/api_exception.dart';
 
 import 'i_ribbon_repository.dart';
 
@@ -8,7 +9,7 @@ class MockRibbonRepository implements IRibbonRepository {
   const MockRibbonRepository();
 
   @override
-  Future<ApiResult<List<RibbonModel>, ApiException>> getHomeRibbons() async {
+  Future<ApiResult<PaginationResponse<RibbonModel>, ApiException>> getHomeRibbons() async {
     await Future.delayed(const Duration(milliseconds: 250));
 
     const center = TrainingCenterModel(
@@ -56,6 +57,6 @@ class MockRibbonRepository implements IRibbonRepository {
       ],
     );
 
-    return ApiResult(response: [ribbon1, ribbon2]);
+    return ApiResult(response: PaginationResponse(total: 2, pageCount: 1, page: 1, perPage: 15, data: [ribbon1, ribbon2]));
   }
 }

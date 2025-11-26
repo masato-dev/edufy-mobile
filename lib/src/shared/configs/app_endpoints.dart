@@ -52,4 +52,7 @@ class AppEndpoints {
 
   // ===== FCM TOKEN (device registration) =====
   static const String fcmTokens = '$apiPrefix/fcm-tokens';
+
+  // ===== BANNER =====
+  static const String banners = '$apiPrefix/banners';
 }

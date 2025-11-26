@@ -1,5 +1,7 @@
 // lib/src/core/dependencies/ioc.dart
 import 'package:dio/dio.dart';
+import 'package:edufy_mobile/src/data/repositories/banner/export.dart';
+import 'package:edufy_mobile/src/data/repositories/banner/i_banner_repository.dart';
 import 'package:edufy_mobile/src/presentation/cubits/export.dart';
 import 'package:get_it/get_it.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
@@ -189,6 +191,19 @@ class Ioc {
     );
     getIt.registerLazySingleton<IAuthRepository>(
       () => const MockAuthRepository(),
+    );
+
+    // --- Banner ---
+    getIt.registerLazySingleton<IBannerRepository>(
+      () => BannerRepository(dio: getIt.get()),
+      instanceName: InstanceNames.persistent.name,
+    );
+    getIt.registerLazySingleton<IBannerRepository>(
+      () => MockBannerRepository(),
+      instanceName: InstanceNames.mock.name,
+    );
+    getIt.registerLazySingleton<IBannerRepository>(
+      () => MockBannerRepository(),
     );
 
     // Cubits
